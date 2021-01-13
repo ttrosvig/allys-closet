@@ -1,0 +1,13 @@
+.InfoModal-link {
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 5px;
+}
+
+.InfoModal-link:hover {
+	color: white;
+	cursor: pointer;
+}

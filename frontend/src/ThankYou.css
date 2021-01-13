@@ -1,0 +1,10 @@
+.ThankYou-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.ThankYou-text {
+	max-width: 300px;
+}

@@ -1,0 +1,23 @@
+.ItemDetails-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 2em;
+	padding-bottom: 300px;
+	max-width: 100vw;
+}
+
+.ItemDetails-info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 1.5em;
+}
+
+.ItemDetails-grid-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}

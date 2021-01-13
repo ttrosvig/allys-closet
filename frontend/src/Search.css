@@ -1,0 +1,13 @@
+.Search-select {
+	border-radius: 0px !important;
+}
+
+.Search-text {
+	border-top-right-radius: 0px !important;
+	border-bottom-right-radius: 0px !important;
+}
+
+.Search-button {
+	border-top-left-radius: 0px !important;
+	border-bottom-left-radius: 0px !important;
+}

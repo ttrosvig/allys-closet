@@ -1,0 +1,19 @@
+.ImgCarousel-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.Carousel {
+	text-align: center;
+}
+
+.Carousel-image {
+	max-height: 500px;
+	max-width: 100%;
+}
+
+/* @media screen and (max-width: 480px) {
+	
+} */

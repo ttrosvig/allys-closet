@@ -1,0 +1,7 @@
+.ItemList-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	padding-bottom: 100px;
+}
