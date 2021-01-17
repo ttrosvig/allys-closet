@@ -4,9 +4,11 @@ import Item from './Item';
 import './ItemList.css';
 import Search from './Search';
 import { BASE_URL } from './variables';
+import { Spinner } from 'reactstrap';
 
 const ItemList = ({ gender }) => {
 	const [ items, setItems ] = useState([]);
+	const [ isLoading, setIsLoading ] = useState(false);
 
 	const searchFn = async (term, filter) => {
 		// Return if there is no input
@@ -21,6 +23,7 @@ const ItemList = ({ gender }) => {
 	useEffect(
 		() => {
 			const getItems = async () => {
+				setIsLoading(true);
 				let res;
 				if (gender === undefined) {
 					res = await axios.get(`${BASE_URL}/items`);
@@ -30,6 +33,7 @@ const ItemList = ({ gender }) => {
 				let itemsResults = res.data.items;
 
 				setItems(itemsResults);
+				setIsLoading(false);
 			};
 			getItems();
 		},
@@ -42,8 +46,11 @@ const ItemList = ({ gender }) => {
 				<Search fn={searchFn} />
 			</div>
 			<div className="ItemList-container container mt-2">
-				{items.length === 0 ? (
-					<h1>No results found</h1>
+				{items.length === 0 && isLoading === false ? <h1>No results found</h1> : null}
+				{isLoading ? (
+					<div className="ItemList-spinner-container">
+						<Spinner color="primary" style={{ width: '3em', height: '3em' }} />
+					</div>
 				) : (
 					items.map((item) => {
 						return (
